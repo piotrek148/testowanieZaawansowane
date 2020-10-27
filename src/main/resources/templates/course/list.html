@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista kursów</title>
+</head>
+<body>
+<h1 th:text="${id}"></h1>
+<table>
+    <thead>
+    <th>ID</th>
+    <th>Nazwa kursu</th>
+    <th>Data startu</th>
+    <th>Data zakończenia</th>
+    <th>Miasto</th>
+    <th>Cena</th>
+    <th>Tryb</th>
+    <th>Prowadzący</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Backend</td>
+        <td>25.10.2020</td>
+        <td>25.04.2021</td>
+        <td>Warszawa</td>
+        <td>7999</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Frontend</td>
+        <td>30.10.2020</td>
+        <td>30.10.2021</td>
+        <td>Warszawa</td>
+        <td>6999</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

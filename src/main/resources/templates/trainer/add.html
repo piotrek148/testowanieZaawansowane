@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie Trenera</title>
+</head>
+<body>
+
+<h2>Dodaj nowego Trenera</h2>
+<p th:if="${createdTrainer}">Dodano trenera <span th:text="${createdTrainer.firstName}"></span></p>
+<form th:action="@{'trener/dodaj'}" th:object="${trainer}" th:method="'post'">
+    <label for="trainer-firstName">Imię</label>
+    <input type="text" id="trainer-firstName" th:field="*{firstName}">
+    <label for="trainer-lastName">Nazwisko</label>
+    <input type="text" id="trainer-lastName" th:field="*{lastName}"><br>
+    <label for="trainer-hourlyRate">Stawka godzinowa</label>
+    <input type="number" id="trainer-hourlyRate" th:field="*{hourlyRate}"><br>
+    <input type="submit" value="Dodaj">
+</form>
+</body>
+</html>

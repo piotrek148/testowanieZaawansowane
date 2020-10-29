@@ -6,36 +6,27 @@
     <title>Lista kursów</title>
 </head>
 <body>
-<h1 th:text="${id}"></h1>
-<table>
-    <thead>
-    <th>ID</th>
-    <th>Nazwa kursu</th>
-    <th>Data startu</th>
-    <th>Data zakończenia</th>
-    <th>Miasto</th>
-    <th>Cena</th>
-    <th>Tryb</th>
-    <th>Prowadzący</th>
-    </thead>
-    <tbody>
-    <tr>
-        <td>1</td>
-        <td>Backend</td>
-        <td>25.10.2020</td>
-        <td>25.04.2021</td>
-        <td>Warszawa</td>
-        <td>7999</td>
+<table bgcolor="#ffe4c4" border="3px">
+    <tr bgcolor="#5f9ea0">
+        <th>ID kursu</th>
+        <th>Nazwa kursu</th>
+        <th>Data startu</th>
+        <th>Data zakończenia</th>
+        <th>Miasto</th>
+        <th>Cena</th>
+        <th>Tryb</th>
+        <th>Prowadzący</th>
+    </tr><br>
+    <tr th:each="kurs: ${kursy}">
+        <td th:text="${kurs.id}"/>
+        <td th:text="${kurs.name}"/>
+        <td th:text="${kurs.startDate}"/>
+        <td th:text="${kurs.endDate}"/>
+        <td th:text="${kurs.city}"/>
+        <td th:text="${kurs.price}"/>
+        <td th:text="${kurs.mode}"/>
+        <td th:text="${kurs.trainer}"/>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>Frontend</td>
-        <td>30.10.2020</td>
-        <td>30.10.2021</td>
-        <td>Warszawa</td>
-        <td>6999</td>
-    </tr>
-    </tbody>
 </table>
 </body>
 </html>
